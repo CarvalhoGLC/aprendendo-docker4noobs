@@ -1,10 +1,13 @@
-FROM node:22-alpine
+# imagem
+FROM node:22-alpine 
 
 WORKDIR /app
 
 COPY package.json ./
 COPY src ./src
 
+RUN npm install
+# porta
 EXPOSE 3000
 
 USER node
